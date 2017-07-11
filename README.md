@@ -17,7 +17,7 @@ For this project, a Constant Velocity (CV) model is assumed and state vector is 
 
 where X and Y axis are relative to the direction in which the self driving car moves, shown below:
 
-![EKF axes definition](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image_resources/EKF_axes_definition.png)
+![EKF axes definition](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_axes_definition.png)
 
 
 ## Kalman Filter Implementation Algorithm:
@@ -26,19 +26,19 @@ Following goals were achieved as a part of implementation:
 
 1. Build the state vector and the state transition matrix. Derive state transition equation. This represents the deterministic part of motion model. Stochastic part of motion is modelled by assuming Gaussian noise with zero mean and standard deviation as σax (For acceleration in X component) and σay (For acceleration in Y component). The state transition equation then derived is shown below:
 
-![CV model state transition equation](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image_resources/CV_state-transition-equation.png)
+![CV model state transition equation](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/CV_state-transition-equation.png)
 
 2. LIDAR measures the distance between self driving car and an object in X and Y axis. Hence, the measurement function for LASER updates, given by H_laser, is linear transform shown below:
 
-![LASER measurement function](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image_resources/H_laser.png)
+![LASER measurement function](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/H_laser.png)
 
 3. RADAR measures the radial distance, the bearing (or angle of orientation w.r.t car) and the radial velocity. This is represented below:
 
-![RADAR measurement](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image_resources/radar_measurement.png)
+![RADAR measurement](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/radar_measurement.png)
 
 Hence, the measurement function for RADAR updates, given by H_radar, is non-linear transform given by:
 
-![RADAR measurement function](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image_resources/H_radar.png)
+![RADAR measurement function](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/H_radar.png)
 
 4. Now that the state transition and measurements functions are derived, use Kalman filter to estimate the path of moving object. Upon receiving a measurement for timestamp k+1, following processes are triggered:
   a. Kalman filter predict to use the state vector at timestamp k, Xk, and **predict** the state vector at timestamp k, Xk+1. This is the updated belief.
@@ -50,7 +50,7 @@ Hence, the measurement function for RADAR updates, given by H_radar, is non-line
 
 7. Calculate the root mean squared error (RMSE) for after Kalman filter update at each time step. This is given by:
 
-![RMSE equation](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image_resources/rmse.png)
+![RMSE equation](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/rmse.png)
 
 
 ## Goals of the project
@@ -63,11 +63,11 @@ Hence, the measurement function for RADAR updates, given by H_radar, is non-line
 
 Run on dataset I
 
-![RMSE on dataset I](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image_resources/EKF_dataset_1_result.png)
+![RMSE on dataset I](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_1_result.png)
 
 Run on dataset II
 
-![RMSE on dataset II](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image_resources/EKF_dataset_2_result.png)
+![RMSE on dataset II](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_2_result.png)
 
 
 ## Steps for building the project in Ubuntu
