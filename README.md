@@ -6,6 +6,7 @@ This repository contains C++ code for implementation of Extended Kalman Filter p
 
 Self driving cars make use of Laser sensor (LIDAR) and/or Radial distance and angle sensor (RADAR) for tracking moving objects such as vehicles, pedestrians, animals, etc. Data received from LIDAR and RADAR is fused to best estimate the trajectory of motion of an object. In this project, trajectory of an object moving in the shape of numerical figure 8 is estimated using LIDAR and RADAR measurements. This is achieved with the help of Kalman filter.
 
+
 ## State vector and model
 
 For this project, a Constant Velocity (CV) model is assumed and state vector is built. The state vector contains following components:
@@ -61,14 +62,14 @@ Hence, the measurement function for RADAR updates, given by H_radar, is non-line
 
 3. Take a note of RMSE values at the last time step of dataset. Minimize the RMSE to bring it in the range of RMSE <= [.11, .11, 0.52, 0.52] for px, py, vx and vy respectively. RMSE values achieved are given below:
 
-**Run on dataset I**
+**Run on dataset 1**
 
 ![RMSE on dataset I](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_1_result.PNG)
 
 
 
 
-**Run on dataset II**
+**Run on dataset 2**
 
 ![RMSE on dataset II](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_2_result.PNG)
 
@@ -83,4 +84,4 @@ Hence, the measurement function for RADAR updates, given by H_radar, is non-line
   c. make
   d. ./ExtendedKF
 
-3. Run the Udacity simulator and test the implementation on dataset I and II.
+3. Run the Udacity simulator and test the implementation on dataset 1 and 2.
