@@ -63,11 +63,11 @@ Hence, the measurement function for RADAR updates, given by H_radar, is non-line
 
 Run on dataset I
 
-![RMSE on dataset I](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_1_result.png)
+![RMSE on dataset I](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_1_result.PNG)
 
 Run on dataset II
 
-![RMSE on dataset II](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_2_result.png)
+![RMSE on dataset II](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_2_result.PNG)
 
 
 ## Steps for building the project in Ubuntu
