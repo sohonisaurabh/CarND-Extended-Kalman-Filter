@@ -61,11 +61,14 @@ Hence, the measurement function for RADAR updates, given by H_radar, is non-line
 
 3. Take a note of RMSE values at the last time step of dataset. Minimize the RMSE to bring it in the range of RMSE <= [.11, .11, 0.52, 0.52] for px, py, vx and vy respectively. RMSE values achieved are given below:
 
-Run on dataset I
+**Run on dataset I**
 
 ![RMSE on dataset I](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_1_result.PNG)
 
-Run on dataset II
+
+
+
+**Run on dataset II**
 
 ![RMSE on dataset II](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_dataset_2_result.PNG)
 
