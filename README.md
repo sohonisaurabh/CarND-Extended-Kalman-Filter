@@ -1,15 +1,15 @@
 # CarND-Extended-Kalman-Filter
 
-This repository contains C++ code for implementation of Extended Kalman Filter project. This project was partially fulfills the goals of Term-II of Udacity's self driving car engineer nanodegree program.
+This repository contains C++ code for implementation of Extended Kalman Filter project. This project partially fulfills the goals of Term-II of Udacity's self driving car engineer nanodegree program.
 
 ## Background
 
-Self driving cars make use of Laser sensor (LIDAR) and/or Radial distance and angle sensor (RADAR) for tracking moving objects such as vehicles, pedestrians, animals, etc. Data received from LIDAR and RADAR is fused to best estimate the trajectory of motion of an object. In this project, trajectory of an object moving in the shape of numerical figure 8 is estimated using LIDAR and RADAR measurements. This is achieved with the help of Kalman filter.
+Self driving cars make use of Laser sensor (LIDAR) and/or Radial distance and angle sensor (RADAR) for tracking moving objects such as vehicles, pedestrians, animals, etc. Data received from LIDAR and RADAR is fused to best estimate the trajectory of motion of the object. In this project, trajectory of an object moving in the shape of numerical figure 8 is estimated using LIDAR and RADAR measurements. This is achieved with the help of Kalman filter.
 
 
 ## State vector and model
 
-For this project, a Constant Velocity (CV) model is assumed and state vector is built. The state vector contains following components:
+For this project, a Constant Velocity (CV) model is assumed while building state vector. The state vector contains following components:
 
 1. Position of object in X axis (px)
 2. Position of object in Y axis (py)
@@ -29,7 +29,7 @@ Following goals were achieved as a part of implementation:
 
 ![CV model state transition equation](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/CV_state-transition-equation.png)
 
-2. LIDAR measures the distance between self driving car and an object in X and Y axis. Hence, the measurement function for LASER updates, given by H_laser, is linear transform shown below:
+2. LIDAR measures the distance between self driving car and an object in X and Y axis. Hence, the measurement function for LASER updates, given by H_laser, is a linear transform shown below:
 
 ![LASER measurement function](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/H_laser.png)
 
@@ -37,19 +37,19 @@ Following goals were achieved as a part of implementation:
 
 ![RADAR measurement](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/radar_measurement.png)
 
-Hence, the measurement function for RADAR updates, given by H_radar, is non-linear transform given by:
+Hence, the measurement function for RADAR updates, given by H_radar, is a non-linear transform given by:
 
 ![RADAR measurement function](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/H_radar.png)
 
-4. Now that the state transition and measurements functions are derived, use Kalman filter to estimate the path of moving object. Upon receiving a measurement for timestamp k+1, following processes are triggered:
-  a. Kalman filter predict to use the state vector at timestamp k, Xk, and **predict** the state vector at timestamp k, Xk+1. This is the updated belief.
-  b. Use the measurement and update the belief using Kalman filter **update**.
+4. Now that the state transition and measurement functions are derived, Kalman filter is used to estimate the path of moving object. Upon receiving a measurement for timestamp k+1, following processes are triggered:
+  a. Kalman filter Predict to use the state vector at timestamp k (Xk) and **predict** the state vector at timestamp k (Xk+1). This is the updated belief after motion.
+  b. Use the measurement and update the belief using Kalman filter **update** once measurement is received.
   
 5. Kalman filter predict step is same for LASER and RADAR measurements.
 
-6. In case of LASER measurement, use normal Kalman filter equations. In case of RADAR update, use Extended Kalman Filter equations which assumes linear approximation of measurement function around mean.
+6. In case of LASER measurement, use normal Kalman filter equations. In case of RADAR update, use Extended Kalman Filter equations which assumes linear approximation around mean of the measurement function.
 
-7. Calculate the root mean squared error (RMSE) for after Kalman filter update at each time step. This is given by:
+7. Calculate the root mean squared error (RMSE) after Kalman filter update at each time step. This is given by:
 
 ![RMSE equation](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/rmse.png)
 
