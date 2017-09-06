@@ -4,7 +4,7 @@ This repository contains C++ code for implementation of Extended Kalman Filter p
 
 ## Background
 
-Self driving cars make use of Laser sensor (LIDAR) and/or Radial distance and angle sensor (RADAR) for tracking moving objects such as vehicles, pedestrians, animals, etc. Data received from LIDAR and RADAR is fused to best estimate the trajectory of motion of the object. In this project, trajectory of an object moving in the shape of numerical figure 8 is estimated using LIDAR and RADAR measurements. This is achieved with the help of Kalman filter.
+Self driving cars make use of Laser sensor (LIDAR) and/or Radial distance and angle sensor (RADAR) for tracking moving objects such as vehicles, pedestrians, animals, etc. Data received from LIDAR and RADAR is fused to best estimate the trajectory of motion of the object. In this project, trajectory of an object moving in the shape of numerical figure 8 is estimated using LIDAR and RADAR measurements. This is achieved with the help of vanilla Kalman filter and Extended version of Kalman filter.
 
 
 ## State vector and model
@@ -21,7 +21,7 @@ where X and Y axis are relative to the direction in which the self driving car m
 ![EKF axes definition](https://raw.githubusercontent.com/sohonisaurabh/CarND-Extended-Kalman-Filter/master/image-resources/EKF_axes_definition.png)
 
 
-## Kalman Filter Implementation Algorithm:
+## Extended Kalman Filter Implementation Algorithm:
 
 Following goals were achieved as a part of implementation:
 
