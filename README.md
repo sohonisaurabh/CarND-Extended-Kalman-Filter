@@ -79,9 +79,9 @@ Hence, the measurement function for RADAR updates, given by H_radar, is a non-li
 1. Execute every step from install-ubuntu.sh. This will install gcc, g++, cmake, make and uWebsocketIO API.
 
 2. Build project
-  a. mkdir build && cd build
-  b. cmake ..
-  c. make
-  d. ./ExtendedKF
+ a. mkdir build && cd build
+ b. cmake ..
+ c. make
+ d. ./ExtendedKF
 
 3. Run the Udacity simulator and test the implementation on dataset 1 and 2.
